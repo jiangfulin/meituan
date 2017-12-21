@@ -1,0 +1,208 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4, h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  color: #333;
+  font-weight: normal;
+  _font-family: "Microsoft Yahei";
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  &:hover {
+    outline: none;
+  }
+}
+
+.fa {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    width: 100%;
+    min-width: 960px;
+    margin: 0 auto;
+    max-width: 1400px
+  }
+}
+
+; //对应PC端页面
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+  .container {
+
+  }
+}
+
+; // 对应平板端页面
+
+@media screen and (max-width: 768px) {
+  .container {
+
+  }
+}
+
+; //对应手机端页面
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #e1e1e1;
+}
+
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clear {
+  zoom: 1;
+}
+
+.back_img {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.margin {
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.paddingTop {
+  padding-top: 1.95rem;
+
+}
+
+@keyframes backOpacity {
+  0% {
+    opacity: 1
+  }
+  25% {
+    opacity: .5
+  }
+  50% {
+    opacity: 1
+  }
+  75% {
+    opacity: .5
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+.animation_opactiy {
+  animation: backOpacity 2s ease-in-out infinite;
+}
+
+.loginContainer .input-groups input {
+  padding-left: 30px;
+}
+.main{
+  width: 90%;
+  max-width: 1400px;
+  min-width: 960px;
+  margin: 15px auto;
+  _min-height: 400px;
+  position: relative;
+  background: #fff;
+  padding-bottom: 5px;
+}
+//回到顶部样式
+.backToTop {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-right: 0;
+  width: 30px;
+  color: gray;
+  font-weight: 600;
+  padding: 12px 0 12px 5px;
+  position: fixed;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  z-index: 20;
+  border-radius: 12px 0 0 12px;
+}
+//loading样式
+.loading {
+  @include wh(100vw,100vh);
+  background: rgba(0,0,0,.3);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+  .fa {
+    color: $base-green;
+    font-size: 60px;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    margin-left:-30px;
+    margin-top: -30px;
+    left: 50%;
+
+  }
+}
+.title-panel{
+  padding: 10px;
+  background-color: $title-panel;
+  border-radius: 3px 3px 0 0;
+
+}
